@@ -22,7 +22,7 @@ $images = get_field('immagini', 'option');
 		</div>
 	</div>
 	<div class="call__to-action">
-		<?php echo do_shortcode('[widget id="wcp_weather_widget-2"]'); ?>
+		<?php echo do_shortcode('[widget id="wcp_weather_widget-3"]'); ?>
 		<?php if(have_rows('call_to_action', 'option')): ?>
 			<div class="swiper-container swiper-cta">
 				<div class="swiper-wrapper">
