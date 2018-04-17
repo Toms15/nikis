@@ -1,0 +1,18 @@
+#map-nikis {
+	margin-top: 3rem;
+	margin-bottom: -3rem;
+	height: 40vh;
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+/* Large and up */
+@media screen and (min-width: 64em) {
+	#map-nikis {
+		margin-top: 6rem;
+		margin-bottom: -6rem;
+	}
+}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

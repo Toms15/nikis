@@ -1,0 +1,50 @@
+.widget_wcp_weather_widget {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	max-width: 300px;
+	padding: 1rem;
+	h2 {
+		display: none;
+	}
+	.wcp-openweather-header,
+	.wcp-openweather-now-details,
+	.wcp-openweather-now-status,
+	.wcp-openweather-country {
+		display: none !important;
+	}
+	.wcp-openweather-city {
+		display: block;
+		text-align: left;
+		font-family: 'Oranienbaum', serif !important;
+		letter-spacing: -0.02em;
+		font-size: 1.5rem !important;
+		text-shadow: 0 0 5px rgba($black,.5);
+	}
+	.wcp-openweather-now-temperature {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-top: -1rem !important;
+		.wcp-openweather-now-icon {
+			.icon {
+				margin-right: .5rem !important;
+			}
+		}
+		.wcp-openweather-now-value {
+			font-family: 'Oranienbaum', serif !important;
+			letter-spacing: -0.02em;
+			font-size: 2.8rem !important;
+			text-shadow: 0 0 5px rgba($black,.5);
+		}
+	}
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+/* Large and up */
+@media screen and (min-width: 64em) {}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

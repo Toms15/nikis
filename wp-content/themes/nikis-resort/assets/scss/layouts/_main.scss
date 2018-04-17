@@ -1,0 +1,28 @@
+.content__container {
+	padding: 3rem 0;
+	position: relative;
+	&.content__container--page {
+		padding-bottom: 0;
+		.section__container {
+			margin-bottom: 3rem;
+		}
+	}
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+/* Large and up */
+@media screen and (min-width: 64em) {
+	.content__container {
+		padding: 6rem 0;
+		&.content__container--page {
+			padding-bottom: 0;
+			.section__container {
+				margin-bottom: 6rem;
+			}
+		}
+	}
+}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

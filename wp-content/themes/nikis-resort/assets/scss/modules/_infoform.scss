@@ -1,0 +1,248 @@
+.section__container--form {
+	border: 1px solid $brown;
+	.wpcf7 {
+		text-align: right;
+		input {
+			border: 0;
+			box-shadow: none;
+			border-bottom: 1px solid $brown;
+			margin-bottom: 0;
+			height: 45px;
+			line-height: 45px;
+			font-family: 'Oranienbaum', serif;
+			letter-spacing: -0.02em;
+			color: $black;
+			font-size: 1rem;
+			padding: 0 1rem;
+			&:focus {
+				border: 0;
+				border-bottom: 1px solid $brown;
+				box-shadow: none;
+			}
+			&[type="submit"] {
+				background-color: $brown;
+				border: 0 !important;
+				color: $white;
+				width: 100%;
+				font-family: 'Open Sans', Helvetica, sans-serif;
+				text-transform: uppercase;
+				height: 45px;
+				line-height: 45px;
+				margin-top: 2rem;
+				&.is--disabled {
+					opacity: .75;
+					background-color: rgba($black,.25);
+				}
+			}
+		}
+		textarea {
+			border: 0;
+			box-shadow: none;
+			border-bottom: 1px solid $brown;
+			font-family: 'Oranienbaum', serif;
+			letter-spacing: -0.02em;
+			color: $black;
+			font-size: 1rem;
+			padding: 1rem;
+			height: 150px;
+			min-height: 150px;
+			max-height: 150px;
+			line-height: 1.5em;
+			width: 100%;
+			max-width: 100%;
+			min-width: 100%;
+		}
+		p {
+			&:nth-of-type(2),
+			&:nth-of-type(4),
+			&:nth-of-type(7),
+			&:nth-of-type(9) {
+				input {
+					border-left: 1px solid $brown;
+				}
+			}
+		}
+		.ajax-loader {
+			display: none;
+		}
+		.checkbox__material {
+			position: relative;
+			padding-top: 0rem;
+			input {
+				position: absolute;
+				opacity: 0;
+			}
+			label {
+				color: $black;
+				position: relative;
+				padding: 0 1rem 0 2rem;
+				cursor: pointer;
+				display: inline-block;
+				font-family: 'Open Sans', Helvetica, sans-serif;
+				font-size: .8rem;
+				text-align: left;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					margin: 4px;
+					width: 20px;
+					height: 20px;
+					z-index: 0;
+					border: 1px solid $brown;
+					transition: .1s ease;
+				}
+				&:after {
+					position: absolute;
+					left: 0;
+					top: 0;
+					content: '';
+					background: $brown;
+					border: 0;
+					width: 10px;
+					height: 10px;
+					margin: 9px;
+					-webkit-transform: scale(0);
+					transform: scale(0);
+					transition: .1s ease;
+				}
+			}
+			&.check {
+				label {
+					&:after {
+						border: 0;
+						-webkit-transform: scale(1);
+						transform: scale(1);
+						transition: .1s ease;
+					}
+				}
+			}
+		}
+	}
+	.col-100 {
+		clear: both;
+		float: none;
+		width: 100%;
+	}
+	.col-50 {
+		float: left;
+		width: 50%;
+	}
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {
+}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+/* Large and up */
+@media screen and (min-width: 64em) {
+	.section__container--form {
+		.wpcf7 {
+			p {
+				&:nth-of-type(2),
+				&:nth-of-type(4),
+				&:nth-of-type(7),
+				&:nth-of-type(9) {
+					input {
+						border-left: none;
+					}
+				}
+			}
+		}
+		.col-50 {
+			float: none;
+			width: 100%;
+			clear: both;
+		}
+	}
+}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+/* Extra-Large */
+@media screen and (min-width: 74.9375em) {
+	.section__container--form {
+		.wpcf7 {
+			input {
+				border: 0;
+				box-shadow: none;
+				border-bottom: 1px solid $brown;
+				margin-bottom: 0;
+				height: 75px;
+				line-height: 75px;
+				font-family: 'Oranienbaum', serif;
+				letter-spacing: -0.02em;
+				color: $black;
+				font-size: 1.3rem;
+				&:focus {
+					border: 0;
+					border-bottom: 1px solid $brown;
+					box-shadow: none;
+				}
+				&[type="submit"] {
+					background-color: $brown;
+					border: 0;
+					color: $white;
+					width: 100%;
+					max-width: 200px;
+					margin-top: 4rem;
+					font-family: 'Open Sans', Helvetica, sans-serif;
+					text-transform: uppercase;
+					font-size: .9rem;
+					height: 75px;
+					line-height: 75px;
+					&.is--disabled {
+						opacity: .75;
+					}
+				}
+			}
+			textarea {
+				height: 150px;
+				min-height: 150px;
+				max-height: 150px;
+				line-height: 1.5em;
+				font-size: 1.3rem;
+				padding: 1rem;
+			}
+			p {
+				&:nth-of-type(2),
+				&:nth-of-type(4),
+				&:nth-of-type(7),
+				&:nth-of-type(9) {
+					input {
+						border-left: 1px solid $brown;
+					}
+				}
+			}
+			.checkbox__material {
+				position: relative;
+			}
+		}
+		.select2-container {
+			height: 75px;
+			line-height: 75px;
+			border: 0;
+			border-bottom: 1px solid $brown;
+			text-align: left;
+			.select2-selection--single {
+				border: 0;
+				height: 75px;
+				line-height: 75px;
+				background-color: transparent;
+				font-family: 'Oranienbaum', serif;
+				letter-spacing: -0.02em;
+				color: $black;
+				font-size: 1.3rem;
+				span {
+					height: 75px;
+					line-height: 75px;
+				}
+			}
+		}
+		.col-50 {
+			float: left;
+			width: 50%;
+			clear: none;
+		}
+	}
+}
