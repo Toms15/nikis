@@ -174,7 +174,7 @@
 /* Medium and up */
 @media screen and (min-width: 40em) {
 	.top__bar--reserve-form {
-		width: 576px;
+		// width: 576px;
 	}
 }
 /* Medium only */
@@ -182,7 +182,7 @@
 /* Large and up */
 @media screen and (min-width: 64em) {
 	.top__bar--reserve-form {
-		width: 341px;
+		// width: 341px;
 		.wpcf7 {
 			p {
 				&:nth-of-type(2),
@@ -207,7 +207,7 @@
 /* Extra-Large */
 @media screen and (min-width: 74.9375em) {
 	.top__bar--reserve-form {
-		width: 560px;
+		// width: 560px;
 		h2 {
 			font-size: 2.3rem;
 			padding-top: 2rem;

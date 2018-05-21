@@ -34,6 +34,9 @@ jQuery(document).ready(function() {
   // ----------------------------------------
   // Reserve Form
   // ----------------------------------------
+  var widthReserve = jQuery('.top__bar--reserve').width();
+  jQuery('.top__bar--reserve-form').css('width', widthReserve);
+  
   jQuery('.top__bar--reserve').on('click', function() {
     jQuery('.top__bar--reserve-form').toggleClass('show');
   });
@@ -52,6 +55,9 @@ jQuery(document).ready(function() {
   // ----------------------------------------
   // Multilanguage
   // ----------------------------------------
+  var widthLanguage = jQuery('.top__bar--lang').width();
+  jQuery('.top__bar--lang-change').css('width', widthLanguage);
+
   jQuery('.top__bar--lang').on('click', function() {
     jQuery('.top__bar--lang-change').toggleClass('show');
     jQuery('.top__bar--lang i.fa-angle-down').toggleClass('is--rotate');

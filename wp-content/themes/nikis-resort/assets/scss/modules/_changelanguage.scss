@@ -5,7 +5,7 @@
 	text-align: center;
 	height: auto;
 	z-index: -1;
-	width: 85px;
+	// width: 85px;
 	transform: translatey(-200%);
 	transition: all 800ms cubic-bezier(.645, .045, .355, 1);
 	&.show {
@@ -29,7 +29,7 @@
 /* Medium and up */
 @media screen and (min-width: 40em) {
 	.top__bar--lang-change {
-		width: 128px;
+		// width: 128px;
 	}
 }
 /* Medium only */
@@ -37,7 +37,7 @@
 /* Large and up */
 @media screen and (min-width: 64em) {
 	.top__bar--lang-change {
-		width: 86px;
+		// width: 86px;
 	}
 }
 /* Large only */
@@ -45,6 +45,6 @@
 /* Extra-Large */
 @media screen and (min-width: 74.9375em) {
 	.top__bar--lang-change {
-		width: 140px;
+		// width: 140px;
 	}
 }
