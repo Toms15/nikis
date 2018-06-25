@@ -31,9 +31,9 @@ $bottom_price = get_field('bassa_stagione');
 			</div>
 		</div>
 		<div class="info__period">
-			<a href="">
+			<a data-open="terms-and-conditions">
 				<i class="fa fa-info-circle"></i>
-				<?php echo __('Consulta la nostra tabella per la periodicità'); ?>
+				<?php echo __('Termini e condizioni'); ?>
 			</a>
 		</div>
 	</section>

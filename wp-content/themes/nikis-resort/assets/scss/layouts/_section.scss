@@ -246,6 +246,18 @@
 				letter-spacing: .3em;
 			}
 		}
+		&.section__container--price-small {
+			padding: 0 1rem;
+			justify-content: center;
+			text-align: center;
+			h3 {
+				font-size: 1rem;
+				color: $black;
+			}
+			i {
+				display: none;
+			}
+		}
 		&.section__container--price-label {
 			background-color: $brown;
 			color: $white;
@@ -254,6 +266,8 @@
 			font-size: 1.2rem;
 			text-transform: uppercase;
 			letter-spacing: .3em;
+			text-align: center;
+			padding: 0;
 		}
 	}
 }
@@ -363,6 +377,14 @@
 			border-left: 1px solid $brown;
 			h3 {
 				font-size: 2.2rem;
+			}
+			&.section__container--price-small {
+				flex-direction: column;
+				i {
+					display: block;
+					font-size: 1.5rem;
+					color: $brown;
+				}
 			}
 		}
 	}

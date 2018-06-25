@@ -10,6 +10,9 @@
  */
 
 $logo = get_field('logo', 'option');
+$text = get_field('testo', 'option');
+$top_text = get_field('alta_stagione', 'option');
+$bottom_text = get_field('bassa_stagione', 'option');
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -26,6 +29,28 @@ $logo = get_field('logo', 'option');
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="reveal" id="terms-and-conditions" data-reveal>
+  <h1><?php echo __('Termini e condizioni'); ?></h1>
+  <div class="grid-x">
+  	<div class="large-6 medium-6 small-12 column">
+  		<h3><?php echo __('Alta stagione'); ?></h3>
+  		<?php echo $top_text; ?>
+  	</div>
+  	<div class="large-6 medium-6 small-12 column">
+  		<h3><?php echo __('Bassa stagione'); ?></h3>
+  		<?php echo $bottom_text; ?>
+  	</div>
+  	<div class="large-12 medium-12 small-12 column">
+  		<h3><?php echo __('Altre info'); ?></h3>
+  		<?php echo $text; ?>
+  	</div>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
 <div id="page" class="site">
 
 	<?php

@@ -1,0 +1,35 @@
+.reveal {
+	padding: 1rem;
+	width: 100%;
+	h1 {
+		font-family: 'Oranienbaum', serif;
+		letter-spacing: -0.02em;
+		color: $brown;
+		font-size: 2rem;
+	}
+	h3 {
+		font-family: 'Oranienbaum', serif;
+		letter-spacing: -0.02em;
+		color: $green;
+		font-size: 1.5rem;
+		margin: 1rem 0 .5rem;
+	}
+	p {
+		font-family: 'Oranienbaum', serif;
+		letter-spacing: -0.02em;
+		color: $black;
+		font-size: 1rem;
+	}
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+/* Large and up */
+@media screen and (min-width: 64em) {
+	.reveal {
+		max-width: 800px;
+	}
+}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
