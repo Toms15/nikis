@@ -83,7 +83,7 @@ $instagram = get_field('instagram', 'option');
 		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
 
-		gtag('config', '<?php echo $analytics; ?>');
+		gtag('config', '<?php echo $analytics; ?>', { 'anonymize_ip': true });
 	</script>
 <?php endif; ?>
 

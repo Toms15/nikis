@@ -87,20 +87,31 @@ jQuery(document).ready(function() {
   // ----------------------------------------
   // Slider
   // ----------------------------------------
-  var mySwiper = new Swiper ('.swiper-grid-container', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
+  $('.swiper-grid-container').each(function (index) {
 
-    autoplay: {
-      delay: 5000,
-    },
+    $(this).attr('id', 'slider-' + index);
+    
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  })
+    $(this).siblings('.swiper-button-next').attr('id', 'swiper-button-next-slider-' + index);
+    $(this).siblings('.swiper-button-prev').attr('id', 'swiper-button-prev-slider-' + index);
+
+
+
+    var mySwiper = new Swiper ($('#slider-' + index), {
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+
+      autoplay: {
+        delay: 5000,
+      },
+
+      navigation: {
+        nextEl: '#swiper-button-next-slider-' + index,
+        prevEl: '#swiper-button-prev-slider-' + index,
+      },
+    });
+  });
 
   // ----------------------------------------
   // Hero Slider
