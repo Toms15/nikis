@@ -8,6 +8,7 @@
  */
 
 get_header();
+$more_text = get_field('ulteriore_testo');
 ?>
 
 	<div id="primary" class="content-area">
@@ -31,7 +32,25 @@ get_header();
 				</div>
 
 				<?php
-					get_template_part( 'section/offers/content', 'info' );
+					get_template_part( 'section/offers/content', 'info' ); ?>
+				
+					<?php if($more_text): ?>
+						<div class="grid-container">
+							<section class="section__container section__container--auto section__container--only-text">
+								<div class="grid-x">
+									<div class="large-12 medium-12 small-12 column">
+										<div class="section__container--text">
+											<?php if($more_text): ?>
+												<?php echo $more_text; ?>
+											<?php endif; ?>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					<?php endif; ?>
+
+				<?php
 					get_template_part( 'section/offers/content', 'more-information' );
 				?>
 			</div>
