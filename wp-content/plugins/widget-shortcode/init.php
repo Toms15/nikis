@@ -3,7 +3,7 @@
 Plugin Name:    Widget Shortcode
 Description:    Output widgets using a simple shortcode.
 Author:         Hassan Derakhshandeh
-Version:        0.3.2
+Version:        0.3.3
 Text Domain:    widget-shortcode
 Domain Path:    /languages
 
@@ -88,7 +88,9 @@ class Widget_Shortcode {
 	 * @return void
 	 */
 	function in_widget_form( $widget, $return, $instance ) {
-		echo '<p>' . __( 'Shortcode', 'widget-shortcode' ) . ': ' . ( ( $widget->number == '__i__' ) ? __( 'Please save this first.', 'widget-shortcode' ) : '<input type="text" value="' . esc_attr( '[widget id="'. $widget->id .'"]' ) . '" readonly="readonly" class="widefat" onclick="this.select()" />' ) . '</p>';
+		echo '<p>' .
+				__( 'Shortcode', 'widget-shortcode' ) . ': ' . ( ( $widget->number == '__i__' ) ? __( 'Please save this first.', 'widget-shortcode' ) : '<input type="text" value="' . esc_attr( '[widget id="'. $widget->id .'"]' ) . '" readonly="readonly" class="widefat" onclick="this.select()" />' ) .
+			'</p>';
 	}
 
 	/**
@@ -113,7 +115,7 @@ class Widget_Shortcode {
 			foreach ( $sidebars_widgets as $position => $widgets )
 				if ( ! empty( $widgets) )
 					foreach ( $widgets as $widget )
-						$widgets_map[$widget] = $position;
+						$widgets_map[ $widget ] = $position;
 
 		return $widgets_map;
 	}
@@ -128,7 +130,7 @@ class Widget_Shortcode {
 		if ( isset( $wp_registered_widgets[ $widget_id ] ) ) {
 			preg_match( '/-(\d+)$/', $widget_id, $number );
 			$options = get_option( $wp_registered_widgets[ $widget_id ]['callback'][0]->option_name );
-			$instance = $options[$number[1]];
+			$instance = $options[ $number[1] ];
 		}
 
 		return isset( $instance ) ? $instance : array();
@@ -166,14 +168,14 @@ class Widget_Shortcode {
 		), $args );
 		extract( $widget_args );
 
-		if ( empty( $id ) || ! isset( $wp_registered_widgets[$id] ) )
+		if ( empty( $id ) || ! isset( $wp_registered_widgets[ $id ] ) )
 			return;
 
 		// get the widget instance options
 		preg_match( '/-(\d+)$/', $id, $number );
-		$options = ( ! empty( $wp_registered_widgets ) && ! empty( $wp_registered_widgets[$id] ) ) ? get_option( $wp_registered_widgets[$id]['callback'][0]->option_name ) : array();
-		$instance = isset( $options[$number[1]] ) ? $options[$number[1]] : array();
-		$class = get_class( $wp_registered_widgets[$id]['callback'][0] );
+		$options = ( ! empty( $wp_registered_widgets ) && ! empty( $wp_registered_widgets[ $id ] ) ) ? get_option( $wp_registered_widgets[ $id ]['callback'][0]->option_name ) : array();
+		$instance = isset( $options[ $number[1] ] ) ? $options[ $number[1] ] : array();
+		$class = get_class( $wp_registered_widgets[ $id ]['callback'][0] );
 
 		// maybe the widget is removed or de-registered
 		if ( ! $class )
@@ -190,7 +192,7 @@ class Widget_Shortcode {
 				'after_title' => $after_title,
 				'after_widget' => $after_widget,
 				'widget_id' => $id,
-				'widget_name' => $wp_registered_widgets[$id]['name']
+				'widget_name' => $wp_registered_widgets[ $id ]['name']
 			),
 			1 => array(
 				'number' => $number[0]
@@ -199,10 +201,10 @@ class Widget_Shortcode {
 
 		// if feasable, use sidebar's parameters
 		$widgets_map = $this->get_widgets_map();
-		if ( isset( $widgets_map[$id] ) ) {
-			$params[0]['name'] = $wp_registered_sidebars[ $widgets_map[$id] ]['name'];
-			$params[0]['id'] = $wp_registered_sidebars[ $widgets_map[$id] ]['id'];
-			$params[0]['description'] = $wp_registered_sidebars[ $widgets_map[$id] ]['description'];
+		if ( isset( $widgets_map[ $id ] ) ) {
+			$params[0]['name'] = $wp_registered_sidebars[ $widgets_map[ $id ] ]['name'];
+			$params[0]['id'] = $wp_registered_sidebars[ $widgets_map[ $id ] ]['id'];
+			$params[0]['description'] = $wp_registered_sidebars[ $widgets_map[ $id ] ]['description'];
 		}
 
 		$params = apply_filters( 'dynamic_sidebar_params', $params );
@@ -217,13 +219,20 @@ class Widget_Shortcode {
 
 		// Substitute HTML id and class attributes into before_widget
 		$classname_ = '';
-		foreach ( (array) $wp_registered_widgets[$id]['classname'] as $cn ) {
+		foreach ( (array) $wp_registered_widgets[ $id ]['classname'] as $cn ) {
 			if ( is_string( $cn ) )
 				$classname_ .= '_' . $cn;
 			elseif ( is_object($cn) )
 				$classname_ .= '_' . get_class( $cn );
 		}
 		$classname_ = ltrim( $classname_, '_' );
+		$classname_ .= ' widget-shortcode';
+
+		/* adds area-{AREA} classname to the widget, indicating the widget's original location */
+		if ( isset( $widgets_map[ $id ] ) ) {
+			$classname_ .= ' area-' . $widgets_map[ $id ];
+		}
+
 		$params[0]['before_widget'] = sprintf( $params[0]['before_widget'], $id, $classname_ );
 
 		// render the widget
@@ -263,7 +272,7 @@ class Widget_Shortcode {
 		if ( ! empty( $all_widgets ) ) {
 			foreach ( $all_widgets as $id => $position ) {
 				if ( $position == 'arbitrary' ) {
-					$title = isset( $wp_registered_widgets[$id]['name'] ) ? $wp_registered_widgets[$id]['name'] : '';
+					$title = isset( $wp_registered_widgets[ $id ]['name'] ) ? $wp_registered_widgets[ $id ]['name'] : '';
 					$options = $this->get_widget_options( $id );
 					if ( isset( $options['title'] ) && ! empty( $options['title'] ) ) {
 						$title = join( ': ', array( $title, $options['title'] ) );
