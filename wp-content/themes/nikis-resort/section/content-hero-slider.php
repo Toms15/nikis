@@ -26,7 +26,8 @@ $images = get_field('immagini', 'option');
 		<?php if(have_rows('call_to_action', 'option')): ?>
 			<div class="swiper-container swiper-cta">
 				<div class="swiper-wrapper">
-					<?php while( have_rows('call_to_action', 'option') ): the_row(); 
+					<?php if (get_locale() == 'it_IT'):
+					while( have_rows('call_to_action', 'option') ): the_row(); 
 						$text = get_sub_field('testo');
 						$button = get_sub_field('bottone');
 						$link = get_sub_field('link');
@@ -37,7 +38,20 @@ $images = get_field('immagini', 'option');
 							<a class="go__to-page--cta" href="<?php echo $link; ?>"><?php echo $button; ?></a>
 						</div>
 					</div>
-					<?php endwhile; ?>
+					<?php endwhile; endif;
+					if (get_locale() == 'en_GB'):
+					while( have_rows('call_to_action_eng', 'option') ): the_row(); 
+						$text = get_sub_field('testo');
+						$button = get_sub_field('bottone');
+						$link = get_sub_field('link');
+					?>
+					<div class="swiper-slide">
+						<div class="inner">
+							<a href="<?php echo $link; ?>"><?php echo $text; ?></a>
+							<a class="go__to-page--cta" href="<?php echo $link; ?>"><?php echo $button; ?></a>
+						</div>
+					</div>
+					<?php endwhile; endif; ?>
 				</div>
 			</div>
 		<?php endif; ?>
