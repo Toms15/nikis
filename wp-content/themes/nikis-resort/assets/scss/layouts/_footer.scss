@@ -47,13 +47,32 @@ footer {
 	.social {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		padding: 1rem 0;
-		background-color: $beige;
+		// background-color: $beige;
 		i {
 			color: $brown;
 			font-size: 2.5rem;
-			margin: 0 .6rem;
+			margin: 0 .3rem;
+		}
+	}
+	.widget__websites {
+		background-color: $white;
+		.widget__websites--large {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.widget__websites--small {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 2rem;
+			img {
+				width: 100%;
+				max-width: 140px;
+				margin: 0 1rem;
+			}
 		}
 	}
 	.copyright {
@@ -91,7 +110,7 @@ footer {
 			}
 		}
 		.social {
-			padding: 2rem 0;
+			padding: 2rem .5rem;
 		}
 	}
 }
