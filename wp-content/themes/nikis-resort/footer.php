@@ -96,6 +96,7 @@ $instagram = get_field('instagram', 'option');
 						<a href="https://www.matrimonio.com/hotel-ricevimenti/nikis-resort--e120924" title="Consigliato in www.matrimonio.com"><img alt="Consigliato da Matrimonio.com" id="wp-rated-img" src="https://cdn1.matrimonio.com/img/badges/2016/badge-simple_it_IT.jpg"/></a>
 					</div>
 					<script>wpShowRatedv2('120924');</script>
+					<script src="https://partners.hotels.com:443/guestratingwidgets/1/398518/HCOM_IT-it_IT/2/9206/result.js"></script>
 					<a id="hcom-w9206" target="_blank" class="hcom-w-badge-2" href="http://it.hotels.com/ho398518/nikis-resort-gubbio-italia/?wapb1=guestratingwidgets-2">
 						<div id="hcom-w9206-inner" class="hcom-w-inner">
 							<div id="hcom-w9206-top" class="hcom-w-top">
