@@ -75,11 +75,19 @@ $bottom_text = get_field('bassa_stagione', 'option');
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"></a>
 		<?php endif; ?>
 		<nav id="site-navigation" class="main-navigation">
-			<?php
+			<?php if (get_locale() == 'it_IT'): 
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 				) );
+			endif;
+			?>
+			<?php if (get_locale() == 'en_GB'): 
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'menu_principale_ENG',
+				) );
+			endif;
 			?>
 		</nav><!-- #site-navigation -->
 		<div class="menu__mobile">

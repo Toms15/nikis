@@ -10,10 +10,18 @@
 ?>
 
 <div class="header__menu_mobile">
-	<?php
-	wp_nav_menu( array(
-		'theme_location' => 'menu-2',
-		'menu_id'        => 'mobile-menu',
-	) );
+	<?php if (get_locale() == 'it_IT'): 
+		wp_nav_menu( array(
+			'theme_location' => 'menu-2',
+			'menu_id'        => 'mobile-menu',
+		) );
+	endif;
+	?>
+	<?php if (get_locale() == 'en_GB'): 
+		wp_nav_menu( array(
+			'theme_location' => 'menu-2',
+			'menu_id'        => 'menu_principale_ENG',
+		) );
+	endif;
 	?>
 </div>

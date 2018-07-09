@@ -60,17 +60,33 @@ $instagram = get_field('instagram', 'option');
 		</div>
 		<div class="large-1 medium-2 small-12 column">
 			<?php if($language): ?>
+				<?php if (get_locale() == 'it_IT'): ?>
 				<div class="top__bar--lang">
 					<i class="fa fa-flag-o"></i>
 					<?php echo __('Ita'); ?>
 					<i class="fa fa-angle-down"></i>
 				</div>
-			<?php endif; ?>
+				<?php endif;
+				if (get_locale() == 'en_GB'): ?>
+				<div class="top__bar--lang">
+					<i class="fa fa-flag-o"></i>
+					<?php echo __('Eng'); ?>
+					<i class="fa fa-angle-down"></i>
+				</div>
+				<?php endif;
+			endif; ?>
 			<div class="top__bar--lang-change">
 				<ul>
-					<li><?php echo __('Ita'); ?></li>
-					<li><?php echo __('Eng'); ?></li>
-					<li><?php echo __('Fra'); ?></li>
+					<li>
+						<a href="/">
+							<?php echo __('Ita'); ?>
+						</a>
+					</li>
+					<li>
+						<a href="/en/">
+							<?php echo __('Eng'); ?>
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
