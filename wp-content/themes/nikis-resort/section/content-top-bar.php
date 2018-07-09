@@ -19,14 +19,28 @@ $instagram = get_field('instagram', 'option');
 	<div class="grid-x">
 		<div class="large-4 medium-9 small-12 column">
 			<?php if($reserve): ?>
+				<?php if (get_locale() == 'it_IT'): ?>
 				<div class="top__bar--reserve">
 					<i class="fa fa-calendar-o"></i>
 					<?php echo __('Prenota ora') ?>
 				</div>
+				<?php endif; ?>
+				<?php if (get_locale() == 'en_GB'): ?>
+				<div class="top__bar--reserve">
+					<i class="fa fa-calendar-o"></i>
+					<?php echo __('Book now') ?>
+				</div>
+				<?php endif; ?>
 			<?php endif; ?>
 			<div class="top__bar--reserve-form">
-				<h2><?php echo __('Richiedi una prenotazione, ti risponderemo il prima possibile'); ?></h2>
-				<?php echo do_shortcode('[contact-form-7 id="72" title="Prenota ora"]'); ?>
+				<?php if (get_locale() == 'it_IT'): ?>
+					<h2><?php echo __('Richiedi una prenotazione, ti risponderemo il prima possibile'); ?></h2>
+					<?php echo do_shortcode('[contact-form-7 id="72" title="Prenota ora"]'); ?>
+				<?php endif; ?>
+				<?php if (get_locale() == 'en_GB'): ?>
+					<h2><?php echo __('Request a reservation, we will reply as soon as possible'); ?></h2>
+					<?php echo do_shortcode('[contact-form-7 id="72" title="Book now"]'); ?>
+				<?php endif; ?>
 			</div>
 		</div>
 		<div class="large-7 medium-1 small-12 column">
