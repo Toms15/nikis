@@ -134,6 +134,7 @@ $instagram = get_field('instagram', 'option');
 					<?php if($cookie): ?>
 						- <a href="<?php echo esc_url( '/cookie' ); ?>">Cookie</a>
 					<?php endif; ?>
+					- <a data-open="terms-and-conditions">Termini e Condizioni</a>
 					- <?php echo $credits; ?>
 				</h6>
 			</div>

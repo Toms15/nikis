@@ -184,6 +184,12 @@
 				padding: 1.5rem;
 			}
 		}
+		&.section__container--only-text--page {
+			a {
+				display: inline-block !important;
+				max-width: 100% !important;
+			}
+		}
 		&.section__container--gallery {
 			background: transparent;
 		}
