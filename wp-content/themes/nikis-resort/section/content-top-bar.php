@@ -39,7 +39,7 @@ $instagram = get_field('instagram', 'option');
 				<?php endif; ?>
 				<?php if (get_locale() == 'en_GB'): ?>
 					<h2><?php echo __('Request a reservation, we will reply as soon as possible'); ?></h2>
-					<?php echo do_shortcode('[contact-form-7 id="72" title="Book now"]'); ?>
+					<?php echo do_shortcode('[contact-form-7 id="518" title="Book now"]'); ?>
 				<?php endif; ?>
 			</div>
 		</div>
