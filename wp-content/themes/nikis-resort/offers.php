@@ -96,7 +96,14 @@ get_header();
 										<?php if($text): ?>
 											<?php echo $text; ?>
 										<?php endif; ?>
-										<a href="<?php echo get_the_permalink(); ?>" class="go__to-page"><?php echo __('Maggiori informazioni'); ?></a>
+										<a href="<?php echo get_the_permalink(); ?>" class="go__to-page">
+											<?php if (get_locale() == 'it_IT'):
+												echo __('Maggiori informazioni'); 
+											endif;
+											if (get_locale() == 'en_GB'):
+												echo __('Read more');
+											endif; ?>
+										</a>
 									</div>
 								</div>
 							<?php endwhile; ?>

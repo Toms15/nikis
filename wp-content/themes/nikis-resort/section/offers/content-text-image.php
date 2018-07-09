@@ -34,13 +34,27 @@ $image = get_field('immagine');
 					<?php if($text): ?>
 						<?php echo custom_field_excerpt(); ?>
 					<?php endif; ?>
-					<a href="<?php echo get_the_permalink(); ?>" class="go__to-page"><?php echo __('Maggiori informazioni'); ?></a>
+					<a href="<?php echo get_the_permalink(); ?>" class="go__to-page">
+						<?php if (get_locale() == 'it_IT'):
+							echo __('Maggiori informazioni'); 
+						endif;
+						if (get_locale() == 'en_GB'):
+							echo __('Read more');
+						endif; ?>
+					</a>
 				</div>
 			</div>
 			<div class="large-6 medium-6 small-12 column hide__mobile effect--hover" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
 				<div class="section__container--image" style="background: url('<?php echo $image['url']; ?>') no-repeat center center;">
 					<div class="inner">
-						<h6><?php echo __('Prenota ora'); ?></h6>
+						<h6>
+							<?php if (get_locale() == 'it_IT'):
+								echo __('Prenota ora'); 
+							endif;
+							if (get_locale() == 'en_GB'):
+								echo __('Book now');
+							endif; ?>
+						</h6>
 					</div>
 				</div>
 			</div>
