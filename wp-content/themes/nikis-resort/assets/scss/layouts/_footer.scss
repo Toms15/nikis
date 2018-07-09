@@ -1,6 +1,6 @@
 footer {
 	.widget__container {
-		background-color: $white;
+		// background-color: $white;
 		padding: 1rem;
 		.contact__box {
 			display: flex;
@@ -58,6 +58,7 @@ footer {
 	}
 	.widget__websites {
 		background-color: $white;
+		padding: 2rem 0 0;
 		.widget__websites--large {
 			display: flex;
 			align-items: center;

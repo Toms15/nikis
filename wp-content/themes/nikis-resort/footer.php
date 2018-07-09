@@ -59,14 +59,25 @@ $instagram = get_field('instagram', 'option');
 		<div class="grid-x">
 			<div class="large-12 medium-12 small-12 column">
 				<div class="widget__websites--small">
+					<a href="https://www.booking.com/hotel/it/nikis-resort.it.html" target="_blank">
+						<img src="/wp-content/themes/nikis-resort/images/Loghi/booking.jpg" alt="">
+					</a>
 					<a href="https://www.expedia.it/_dms/header/logo.svg?locale=it_IT&siteid=8" target="_blank">
 						<img src="/wp-content/themes/nikis-resort/images/Loghi/expedia.jpg" alt="">
 					</a>
-					<a href="http://www.sawdays.co.uk/italy/umbria/perugia/nikis-resort?utm_source=member_website&utm_medium=2014_badge&utm_campaign=badge_link" target="_blank">
-						<img src="/wp-content/themes/nikis-resort/images/Loghi/sawdays.jpg" alt="">
-					</a>
 					<a href="https://www.tripadvisor.it/Hotel_Review-g187906-d3254182-Reviews-Nikis_Resort-Gubbio_Province_of_Perugia_Umbria.html" target="_blank">
 						<img src="/wp-content/themes/nikis-resort/images/Loghi/tripadvisor.jpg" alt="">
+					</a>
+					<a href="https://it.hotels.com/ho398518/nikis-resort-gubbio-italia/" target="_blank">
+						<img src="/wp-content/themes/nikis-resort/images/Loghi/hotels.jpg" alt="">
+					</a>
+				</div>
+				<div class="widget__websites--small">
+					<a href="https://www.matrimonio.com/hotel-ricevimenti/nikis-resort--e120924" target="_blank">
+						<img src="/wp-content/themes/nikis-resort/images/Loghi/matrimonio.jpg" alt="">
+					</a>
+					<a href="http://www.sawdays.co.uk/italy/umbria/perugia/nikis-resort?utm_source=member_website&utm_medium=2014_badge&utm_campaign=badge_link" target="_blank">
+						<img src="/wp-content/themes/nikis-resort/images/Loghi/sawdays.jpg" alt="">
 					</a>
 					<a href="https://www.eccellenzeitaliane.com/aziende/nikis-resort-country-house/10064514" target="_blank">
 						<img src="/wp-content/themes/nikis-resort/images/Loghi/eccellenze.jpg" alt="">
@@ -76,7 +87,7 @@ $instagram = get_field('instagram', 'option');
 					</a>
 				</div>
 			</div>
-			<div class="large-12 medium-12 small-12 column">
+			<!-- <div class="large-12 medium-12 small-12 column">
 				<div class="widget__websites--large">
 					<script>
 						(function() {
@@ -109,7 +120,7 @@ $instagram = get_field('instagram', 'option');
 						</div>
 					</a>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<div class="copyright">
