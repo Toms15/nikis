@@ -16,7 +16,12 @@ $bottom_price = get_field('bassa_stagione');
 		<div class="grid-x">
 			<div class="large-4 medium-4 small-12 column" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
 				<div class="section__container--price section__container--price-label">
-					<?php echo __('Per informazioni'); ?>
+					<?php if (get_locale() == 'it_IT'):
+						echo __('Per infomrazioni'); 
+					endif;
+					if (get_locale() == 'en_GB'):
+						echo __('For more informations');
+					endif; ?>
 				</div>
 			</div>
 			<div class="large-6 medium-4 small-12 column" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">

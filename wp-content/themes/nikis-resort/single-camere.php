@@ -23,7 +23,12 @@ get_header();
 						<div class="entry__breadcrumbs--item">
 							<a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
 							<i class="fa fa-angle-right"></i>
-							<a href="<?php echo esc_url(home_url('/camere')); ?>">Le Camere</a>
+							<?php if (get_locale() == 'it_IT'): ?>
+								<a href="<?php echo esc_url(home_url('/camere')); ?>">Le Camere</a>
+							<?php endif;
+							if (get_locale() == 'en_GB'): ?>
+								<a href="<?php echo esc_url(home_url('/rooms')); ?>">Rooms</a>
+							<?php endif; ?>
 							<i class="fa fa-angle-right"></i>
 							<span class="entry__breadcrumbs--item-current"><?php echo the_title(); ?></span>
 						</div>
