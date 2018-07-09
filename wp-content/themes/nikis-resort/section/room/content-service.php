@@ -43,6 +43,8 @@ $service = get_field('servizi_aggiuntivi');
 									echo 'Caminetto';
 								elseif($s == 'temperature'):
 									echo 'Riscaldamento';
+								elseif($s == 'air_conditioned'):
+									echo 'Aria Condizionata';
 								endif; ?>
 							</h4>
 						</div>
