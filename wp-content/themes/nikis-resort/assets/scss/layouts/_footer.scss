@@ -68,6 +68,7 @@ footer {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			flex-direction: column;
 			margin-bottom: 2rem;
 			img {
 				width: 100%;
@@ -112,6 +113,27 @@ footer {
 		}
 		.social {
 			padding: 2rem .5rem;
+		}
+		.widget__websites {
+			background-color: $white;
+			padding: 2rem 0 0;
+			.widget__websites--large {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.widget__websites--small {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: row;
+				margin-bottom: 2rem;
+				img {
+					width: 100%;
+					max-width: 140px;
+					margin: 0 1rem;
+				}
+			}
 		}
 	}
 }

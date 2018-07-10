@@ -5,7 +5,7 @@ jQuery(document).ready(function() {
   // Cookie Bar
   // ----------------------------------------
   jQuery.cookieBar({
-   message: "Cliccando su OK, l’utente accetta l’utilizzo dei cookie di terze parti. Per maggiori informazioni, anche in ordine alla disattivazione, è possibile consultare l'<a class='cookie-link-2' href='https://nikis.app/cookie/'>informativa cookie completa</a>.",
+   message: "Cliccando su OK, l’utente accetta l’utilizzo dei cookie di terze parti. Per maggiori informazioni, anche in ordine alla disattivazione, è possibile consultare l'<a class='cookie-link-2' href='/cookie'>informativa cookie completa</a>.",
    acceptText: 'Ok',
    fixed: true,
    bottom: true
@@ -16,7 +16,7 @@ jQuery(document).ready(function() {
   // ----------------------------------------
   jQuery("header").sticky({topSpacing:30});
 
-  // ----------------------------------------
+  //----------------------------------------
   // Header Mobile
   // ----------------------------------------
   jQuery('.menu__mobile').on('click', function() {

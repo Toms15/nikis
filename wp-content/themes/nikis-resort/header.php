@@ -58,10 +58,6 @@ $bottom_text = get_field('bassa_stagione', 'option');
 	?>
 
 	<?php
-		get_template_part( 'section/content', 'header-mobile' );
-	?>
-
-	<?php
 	if ( is_home() || is_front_page() ):
 		get_template_part( 'section/content', 'hero-slider' );	
 	else: ?>
@@ -95,6 +91,9 @@ $bottom_text = get_field('bassa_stagione', 'option');
 			<span class="line"></span>
 			<span class="line"></span>
 		</div>
+		<?php
+			get_template_part( 'section/content', 'header-mobile' );
+		?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
